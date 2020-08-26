@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -13,6 +13,87 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.7" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Models" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.1\Library.csproj.ResolveComReference.cache" />
+    <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.1\Library.csproj.ResolveComReference.cache" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <IntermediateAssembly Remove="obj\Debug\netcoreapp3.1\Library.dll" />
+    <IntermediateAssembly Remove="obj\Debug\netcoreapp3.1\Library.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.1\Library.pdb" />
+    <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.1\Library.pdb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.1\Library.dll" />
+    <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.1\Library.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ApplicationManifest Remove="obj\Debug\netcoreapp3.1\Library.dll.manifest" />
+    <ApplicationManifest Remove="obj\Debug\netcoreapp3.1\Library.dll.manifest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DeployManifest Remove="obj\Debug\netcoreapp3.1\Library.application" />
+    <DeployManifest Remove="obj\Debug\netcoreapp3.1\Library.application" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ClsidMap Remove="obj\Debug\netcoreapp3.1\Library.clsidmap" />
+    <ClsidMap Remove="obj\Debug\netcoreapp3.1\Library.clsidmap" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <RegFreeComManifest Remove="obj\Debug\netcoreapp3.1\Library.X.manifest" />
+    <RegFreeComManifest Remove="obj\Debug\netcoreapp3.1\Library.X.manifest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <RazorIntermediateAssembly Remove="obj\Debug\netcoreapp3.1\Library.Views.dll" />
+    <RazorIntermediateAssembly Remove="obj\Debug\netcoreapp3.1\Library.Views.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_RazorDebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.1\Library.Views.pdb" />
+    <_RazorDebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.1\Library.Views.pdb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckBuilt Remove="obj\Debug\netcoreapp3.1\Library.Views.dll" />
+    <UpToDateCheckBuilt Remove="obj\Debug\netcoreapp3.1\Library.Views.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_RazorComponentDeclarationAssembly Remove="obj\Debug\netcoreapp3.1\RazorDeclaration\Library.dll" />
+    <_RazorComponentDeclarationAssembly Remove="obj\Debug\netcoreapp3.1\RazorDeclaration\Library.dll" />
   </ItemGroup>
 
 </Project>
