@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="2020.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.7" />
@@ -14,10 +15,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.7" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.4" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Data\Models" />
+    <PackageReference Include="System.Data.Entity.Repository" Version="2.0.0.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -94,6 +92,11 @@
   <ItemGroup>
     <_RazorComponentDeclarationAssembly Remove="obj\Debug\netcoreapp3.1\RazorDeclaration\Library.dll" />
     <_RazorComponentDeclarationAssembly Remove="obj\Debug\netcoreapp3.1\RazorDeclaration\Library.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="obj\Debug\netcoreapp3.1" />
+    <Folder Include="Services" />
   </ItemGroup>
 
 </Project>

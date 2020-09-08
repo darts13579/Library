@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Library.Data.Entity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Library.Data
+namespace Library.Data.Context
 {
     public class ApplicationDbContext : IdentityDbContext
     {
@@ -9,5 +10,7 @@ namespace Library.Data
             : base(options)
         {
         }
+
+        public DbSet<Book> Books { get; set; }
     }
 }

@@ -15,7 +15,7 @@ using Microsoft.Extensions.Hosting;
 
 namespace Library
 {
-    public class Startup
+    public partial class Startup
     {
         public Startup(IConfiguration configuration)
         {
@@ -23,18 +23,6 @@ namespace Library
         }
 
         public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseNpgsql(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddControllersWithViews();
-            services.AddRazorPages();
-        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
