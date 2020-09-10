@@ -1,5 +1,6 @@
 ﻿using Library.Data;
 using Library.Data.Context;
+using Library.Data.Entity;
 using Library.Data.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -18,7 +19,7 @@ namespace Library
                 options.UseNpgsql(
                     Configuration.GetConnectionString("DefaultConnection")));
             
-            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            services.AddIdentity<LibraryUser, IdentityRole>(options =>
                 {
                     options.SignIn.RequireConfirmedAccount = false;
                     options.Password.RequireUppercase = false;

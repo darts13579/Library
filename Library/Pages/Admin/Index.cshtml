@@ -1,0 +1,43 @@
+﻿@model List<Library.Models.User.LibraryUserModel>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<a asp-action="Create">Добавить пользователя</a>
+ 
+
+<div class="pl-table">
+  <div class="pl-thead">
+    <div class="row">
+      <div class="col">Id</div>
+      <div class="col">Name</div>
+      <div class="col">Surname</div>
+      <div class="col">Address</div>
+      <div class="col">Role</div>
+      <div class="col">Control</div>
+    </div>
+  </div>
+    <div class="pl-tbody">
+        @foreach (var user in Model)
+        {
+            <div class="row">
+                <div class="col">@user.Id</div>
+                <div class="col">@user.Name</div>
+                <div class="col">@user.Surname</div>
+                <div class="col">@user.Email</div>
+                <div class="col">@user.Address</div>
+                <div class="col">@user.Role</div>
+                <div>
+                    <form asp-action="Delete" asp-route-id="@user.Id" method="post">
+                        <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@user.Id">Изменить</a>
+                        <button type="submit" class="btn btn-sm btn-danger">
+                            Удалить
+                        </button>
+                    </form>
+                </div>
+            </div>
+        }
+    </div>
+</div>
